@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 ﻿Imports System.IO
 
 Public Class Form1
@@ -34,5 +35,17 @@ Public Class Form1
 
     Private Sub OpenFileDialog1_FileOk(sender As Object, e As System.ComponentModel.CancelEventArgs) Handles OpenFileDialog1.FileOk
         PictureBox1.Load(OpenFileDialog1.FileName)
+=======
+﻿Public Class Form1
+    Private Sub SaveToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles SaveToolStripMenuItem.Click
+        Dim outfile As New IO.StreamWriter("out.txt")
+        outfile.WriteLine(TextBox1.Text)
+        outfile.Close()
+    End Sub
+
+    Private Sub NewToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles NewToolStripMenuItem.Click
+        TextBox1.Clear()
+
+>>>>>>> main
     End Sub
 End Class
